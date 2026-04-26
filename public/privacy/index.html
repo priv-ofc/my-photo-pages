@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Perfil • Conteúdo Exclusivo</title>
+  <meta name="description" content="Perfil de criador com conteúdo exclusivo para assinantes." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a href="#" class="logo">my<span>profile</span></a>
+      <nav class="topbar__nav">
+        <a href="#" class="btn btn--ghost">Entrar</a>
+        <a href="#planos" class="btn btn--primary">Assinar</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Cover + Avatar -->
+  <section class="cover">
+    <img src="images/cover.jpg" alt="Imagem de capa do perfil" class="cover__img" />
+    <div class="cover__overlay"></div>
+  </section>
+
+  <main class="profile">
+    <div class="profile__header">
+      <div class="avatar">
+        <img src="images/avatar.jpg" alt="Foto de perfil" />
+        <span class="avatar__badge" title="Verificado">✓</span>
+      </div>
+
+      <div class="profile__info">
+        <h1 class="profile__name">Seu Nome <span class="verified">✓</span></h1>
+        <p class="profile__handle">@seuusuario</p>
+        <p class="profile__bio">
+          Criadora de conteúdo exclusivo. Posts novos toda semana 💖
+          Assine para ver tudo!
+        </p>
+        <ul class="profile__stats">
+          <li><strong id="stat-posts">128</strong> posts</li>
+          <li><strong id="stat-fans">12.4k</strong> fãs</li>
+          <li><strong id="stat-likes">98k</strong> curtidas</li>
+        </ul>
+      </div>
+
+      <div class="profile__actions">
+        <button class="btn btn--primary btn--lg" id="subscribeBtn">Assinar por R$ 29,90/mês</button>
+        <button class="btn btn--ghost" id="messageBtn">Mensagem</button>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <nav class="tabs" id="tabs">
+      <button class="tab tab--active" data-tab="feed">Feed</button>
+      <button class="tab" data-tab="fotos">Fotos</button>
+      <button class="tab" data-tab="videos">Vídeos</button>
+      <button class="tab" data-tab="sobre">Sobre</button>
+    </nav>
+
+    <!-- Conteúdo das tabs -->
+    <section class="panel panel--active" data-panel="feed">
+      <div class="grid" id="feedGrid"><!-- gerado por JS --></div>
+    </section>
+
+    <section class="panel" data-panel="fotos">
+      <div class="grid" id="photosGrid"></div>
+    </section>
+
+    <section class="panel" data-panel="videos">
+      <div class="grid grid--video" id="videosGrid"></div>
+    </section>
+
+    <section class="panel" data-panel="sobre">
+      <div class="about">
+        <h2>Sobre mim</h2>
+        <p>Escreva aqui um texto sobre você, sua proposta de conteúdo, sua rotina de posts e como interagir com fãs.</p>
+        <ul class="about__list">
+          <li>📍 Brasil</li>
+          <li>🎂 Membro desde 2024</li>
+          <li>📸 Fotos exclusivas</li>
+          <li>🎥 Vídeos semanais</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Planos -->
+    <section class="plans" id="planos">
+      <h2>Escolha seu plano</h2>
+      <div class="plans__grid">
+        <article class="plan">
+          <h3>Mensal</h3>
+          <p class="plan__price">R$ 29,90<span>/mês</span></p>
+          <ul>
+            <li>Acesso a todo conteúdo</li>
+            <li>Mensagens diretas</li>
+            <li>Cancele quando quiser</li>
+          </ul>
+          <button class="btn btn--primary">Assinar mensal</button>
+        </article>
+        <article class="plan plan--featured">
+          <span class="plan__tag">Mais popular</span>
+          <h3>Trimestral</h3>
+          <p class="plan__price">R$ 79,90<span>/3 meses</span></p>
+          <ul>
+            <li>Tudo do mensal</li>
+            <li>Economia de 11%</li>
+            <li>Conteúdo bônus</li>
+          </ul>
+          <button class="btn btn--primary">Assinar trimestral</button>
+        </article>
+        <article class="plan">
+          <h3>Anual</h3>
+          <p class="plan__price">R$ 249,90<span>/ano</span></p>
+          <ul>
+            <li>Tudo do trimestral</li>
+            <li>Economia de 30%</li>
+            <li>Brinde exclusivo</li>
+          </ul>
+          <button class="btn btn--primary">Assinar anual</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Seu Nome — Todos os direitos reservados.</p>
+    <nav>
+      <a href="#">Termos</a>
+      <a href="#">Privacidade</a>
+      <a href="#">Contato</a>
+    </nav>
+  </footer>
+
+  <!-- Modal blur -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose" aria-label="Fechar">×</button>
+      <h3>Conteúdo exclusivo 🔒</h3>
+      <p>Assine para desbloquear este e todos os outros conteúdos.</p>
+      <a href="#planos" class="btn btn--primary btn--lg" id="modalCta">Ver planos</a>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
