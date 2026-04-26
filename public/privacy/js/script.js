@@ -2,21 +2,15 @@
 // Adicione/remova fotos aqui. "locked: true" = aparece borrada (precisa assinar).
 const POSTS = [
   { img: 'images/foto1.jpg', locked: false },
-  { img: 'images/foto2.jpg', locked: false },
+  { img: 'images/foto2.jpg', locked: true  },
   { img: 'images/foto3.jpg', locked: true  },
-  { img: 'images/foto4.jpg', locked: true  },
-  { img: 'images/foto5.jpg', locked: false },
-  { img: 'images/foto6.jpg', locked: true  },
-  { img: 'images/foto7.jpg', locked: true  },
-  { img: 'images/foto8.jpg', locked: false },
-  { img: 'images/foto9.jpg', locked: true  },
 ];
 
 const VIDEOS = [
-  { img: 'images/video1.jpg', locked: false },
-  { img: 'images/video2.jpg', locked: true  },
-  { img: 'images/video3.jpg', locked: true  },
-  { img: 'images/video4.jpg', locked: true  },
+  { img: 'images/video1.jpg', video: 'videos/video1.mp4', locked: false },
+  { img: 'images/video2.jpg', video: 'videos/video2.mp4', locked: true  },
+  { img: 'images/video3.jpg', video: 'videos/video3.mp4', locked: true  },
+  { img: 'images/video4.jpg', video: 'videos/video4.mp4', locked: true  },
 ];
 
 // ========= Renderização =========
