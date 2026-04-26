@@ -86,6 +86,16 @@ document.getElementById('messageBtn')?.addEventListener('click', openModal);
 // ========= Footer =========
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// ========= Bio "ver mais" =========
+const bioToggle = document.getElementById('bioToggle');
+const bioMore = document.querySelector('.bio__more');
+let bioExpanded = false;
+bioToggle?.addEventListener('click', () => {
+  bioExpanded = !bioExpanded;
+  bioMore.hidden = !bioExpanded;
+  bioToggle.textContent = bioExpanded ? 'ver menos' : 'ver mais...';
+});
+
 // ========= Video player =========
 function openVideo(src) {
   if (!src) return;
