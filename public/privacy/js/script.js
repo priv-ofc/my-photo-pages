@@ -81,10 +81,7 @@ modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); }
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
 // ========= Botões =========
-document.getElementById('subscribeBtn').addEventListener('click', () => {
-  document.getElementById('planos').scrollIntoView({ behavior: 'smooth' });
-});
-document.getElementById('messageBtn').addEventListener('click', openModal);
+document.getElementById('messageBtn')?.addEventListener('click', openModal);
 
 // ========= Footer =========
 document.getElementById('year').textContent = new Date().getFullYear();
