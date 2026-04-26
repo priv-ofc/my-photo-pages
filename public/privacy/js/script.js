@@ -36,6 +36,7 @@ function createCard(item, isVideo = false) {
     play.className = 'card__play';
     play.textContent = '▶';
     card.appendChild(play);
+    card.addEventListener('click', () => openVideo(item.video));
   }
 
   return card;
