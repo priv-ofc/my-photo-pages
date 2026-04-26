@@ -88,3 +88,14 @@ document.getElementById('messageBtn').addEventListener('click', openModal);
 
 // ========= Footer =========
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ========= Video player =========
+function openVideo(src) {
+  if (!src) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'modal';
+  overlay.style.cursor = 'pointer';
+  overlay.innerHTML = `<video src="${src}" controls autoplay playsinline style="max-width:90vw;max-height:85vh;border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.6)"></video>`;
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove(); });
+  document.body.appendChild(overlay);
+}
